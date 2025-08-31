@@ -11,11 +11,11 @@ const connectDB = require('./config/connectDB')
 connectDB()
 
 //route Test
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.status(200).json("Ceci est un Test");
-});
+});*/
 
-//app.use(("/api/user",require("./routes/user.routes")))
+//les Routes user
 app.use("/api/user", require("./routes/user.routes"));
 
 const PORT = process.env.PORT || 3000;

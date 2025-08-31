@@ -6,10 +6,10 @@ const userSchema = new mongoose.Schema({
         required: true,
     },
     
-    age: {
+    /*age: {
         type: number,
         default: 20,
-    },
+    },*/
 
     email: {
         type: String,
@@ -21,11 +21,14 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
 
-    phone: number,
+    phone: Number,
 
-    role: {
+   /* role: {
         type: String,
-        default: user,
-    }
+        default: "user",
+    }*/
 
 });
+
+const User = mongoose.model("user", userSchema)
+module.exports = User;
